@@ -7,8 +7,9 @@ const numQuest = document.getElementById('numeroQuestao')
 const container = document.querySelector('.container')
 const start = document.getElementById('Start')
 const res = document.getElementById('res')
-var cont = 1
+var cont = 0
 var nQuestao = 0
+var alt = 0
 const q = [4]
 
 
@@ -56,11 +57,11 @@ q[4] = {
 // BOTÃO PARA INICICAR O QUIZ
 function iniciar() {
     container.style.display = 'block'
-    pergunta.textContent = q[0].perguntaQuestao
-    a1.textContent = q[0].alternativa1
-    a2.textContent = q[0].alternativa2
-    a3.textContent = q[0].alternativa3
-    a4.textContent = q[0].alternativa4
+    pergunta.textContent = q[cont].perguntaQuestao
+    a1.textContent = q[cont].alternativa1
+    a2.textContent = q[cont].alternativa2
+    a3.textContent = q[cont].alternativa3
+    a4.textContent = q[cont].alternativa4
     numQuest.textContent =  `Pergunta 1/4`
     start.disabled = true
     start.style.display = 'none'
@@ -68,8 +69,30 @@ function iniciar() {
     res.innerHTML += ' ' + cont
 }
 
+// FUNÇÕES DAS ALTERNATIVAS
+function alternativa1() {
+    proximaQuestao()
+    questaoCorreta1()
+}
+
+function alternativa2() {
+    proximaQuestao()
+    questaoCorreta2()
+}
+
+function alternativa3() {
+    proximaQuestao()
+    questaoCorreta3() 
+}
+
+function alternativa4() {
+    proximaQuestao()
+    questaoCorreta4()
+}
+
 // FUNÇÃO PARA AVANÇAR PARA AS PRÓXIMAS QUESTÕES
-function proximaQuestao() {
+function proximaQuestao(){
+    cont += 1
     numQuest.textContent =  `Pergunta ${cont}/4`
     disabled_btn()
     pergunta.textContent = q[cont].perguntaQuestao
@@ -77,18 +100,44 @@ function proximaQuestao() {
     a2.textContent = q[cont].alternativa2
     a3.textContent = q[cont].alternativa3
     a4.textContent = q[cont].alternativa4
-    questaoCorreta()
-    cont += 1
     nQuestao += 1
     res.innerHTML = nQuestao
-    res.innerHTML += ' ' + cont
+    res.innerHTML += `cont: ${cont}`
+
+    return
 }
 
 //FUNÇÃO PARA VERFICAR A QUESTÃO CORRETA
+function questaoCorreta1(){
+    if(q[alt].alternativa1 == q[alt].correta){
+        alert('Acertou')
+    }
+    alt += 1
+    return
+}
 
-function questaoCorreta(){
-    
-    return true
+function questaoCorreta2(){
+    if(q[alt].alternativa2 == q[alt].correta){
+        alert('Acertou')
+    }
+    alt += 1
+    return
+}
+
+function questaoCorreta3(){
+    if(q[alt].alternativa3 == q[alt].correta){
+        alert('Acertou')
+    }
+    alt += 1
+    return
+}
+
+function questaoCorreta4(){
+    if(q[alt].alternativa4 == q[alt].correta){
+        alert('Acertou')
+    }
+    alt += 1
+    return
 }
 
 // FUNÇÃO PARA DESABILITAR OS BOTES APÓS O QUIZ
