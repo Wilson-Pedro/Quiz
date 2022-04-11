@@ -12,22 +12,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(100, 99, 99);
+    background: linear-gradient(45deg, rgb(8, 85, 158), rgb(43, 149, 248));
 }
 
 div.container {
     text-align: center;
-    background-color: pink;
-    width: 20rem;
+    background-color: rgb(216, 216, 216);
+    height: 68vh;
+    width: 31rem;
     border-radius: 5px;
     padding: 20px;
     display: none;
 }
 
+#pergunta {
+    font-size: 22pt;
+}
+
 button {
-    padding: 10px;
+    padding: 13px;
     width: 98%;
-    margin-top: 5px;
+    margin-top: 1.5rem;
     border: 0;
     cursor: pointer;
     background: rgb(0, 89, 255);
@@ -43,8 +48,13 @@ button#Start {
     background: rgb(0, 89, 255);
     color: white;
     font-size: 15pt;
+    border: 1px solid rgb(2, 0, 32);
     border-radius: 3px;
     width: 20vw;
+}
+
+button#Start:hover {
+    background: rgb(2, 0, 32);
 }
 
 button:hover {
@@ -53,4 +63,19 @@ button:hover {
 
 div#numeroQuestao {
     text-align: center;
+}
+
+.res {
+    font-size: 17pt;
+    font-weight: bold;
+    display: inline-block;
+    margin: 3rem;
+    margin-top:3.6rem;
+}
+
+#numeroQuestao {
+    color:white;
+    font-weight: bold;
+    margin-top: 2rem;
+    font-size: 15pt;
 }
