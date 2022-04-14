@@ -60,7 +60,17 @@ q[4] = {
 }
 
 q[5] = {
-    perguntaQuestao: 'Quiz Finalizado!'
+    perguntaQuestao: 'Quanto é 5 x 4 ?',
+    alternativa1: 16,
+    alternativa2: 2,
+    alternativa3: 20,
+    alternativa4: 8,
+    correta: 20,
+}
+
+q[6] = {
+    perguntaQuestao: 'Quiz Finalizado',
+    
 }
 
 // BOTÃO PARA INICICAR O QUIZ
@@ -71,9 +81,9 @@ function iniciar() {
     a2.textContent = q[cont].alternativa2
     a3.textContent = q[cont].alternativa3
     a4.textContent = q[cont].alternativa4
-    numQuest.textContent =  `Pergunta 1/4`
     start.style.display = 'none'
-    contagemAcertos.textContent = 'Acertos: 0/4'
+
+    cont = 0
 }
 
 // FUNÇÕES DAS ALTERNATIVAS
@@ -100,14 +110,13 @@ function alternativa4() {
 // FUNÇÃO PARA AVANÇAR PARA AS PRÓXIMAS QUESTÕES
 function proximaQuestao(){
     cont += 1
-    numQuest.textContent =  `Pergunta ${cont}/4`
     disabled_btn()
     pergunta.textContent = q[cont].perguntaQuestao
     a1.textContent = q[cont].alternativa1
     a2.textContent = q[cont].alternativa2
     a3.textContent = q[cont].alternativa3
     a4.textContent = q[cont].alternativa4
-    contagemAcertos.textContent = 'Acertos: ' + acertos + '/4'
+    contagemAcertos.textContent = 'Acertos: ' + acertos + '/5'
 
     return
 }
@@ -152,7 +161,7 @@ function questaoCorreta4(){
 
 //FUNÇÃO PARA DESABILITAR OS BOTES APÓS O QUIZ
 function disabled_btn(){
-    if (cont == 5){
+    if (cont == 6){
         a1.style.display = 'none'
         a2.style.display = 'none'
         a3.style.display = 'none'
@@ -160,5 +169,5 @@ function disabled_btn(){
         
     }
     
-    return true;
+    return
 }
