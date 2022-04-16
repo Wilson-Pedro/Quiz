@@ -166,7 +166,7 @@ function disabled_btn(){
         a2.style.display = 'none'
         a3.style.display = 'none'
         a4.style.display = 'none'
-        
+        voltar.style.display = 'block'
     }
     
     return

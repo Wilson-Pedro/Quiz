@@ -12,12 +12,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, rgb(8, 85, 158), rgb(43, 149, 248));
+    background-image: url('wallpaperQuiz.jpg');
+    background-size: cover;
 }
 
 div.container {
     text-align: center;
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(215, 228, 236);
     height: 68vh;
     width: 31rem;
     border-radius: 5px;
@@ -45,7 +46,7 @@ button#Start {
     padding: 15px;
     border: 0;
     cursor: pointer;
-    background: rgb(0, 89, 255);
+    background: rgb(101, 142, 218);
     color: white;
     font-size: 15pt;
     border: 1px solid rgb(2, 0, 32);
@@ -54,7 +55,7 @@ button#Start {
 }
 
 button#Start:hover {
-    background: rgb(2, 0, 32);
+    background: rgb(105, 97, 214);
 }
 
 button:hover {
@@ -78,4 +79,25 @@ div#numeroQuestao {
     font-weight: bold;
     margin-top: 2rem;
     font-size: 15pt;
+}
+
+div#voltar{
+    padding: 10px;
+    border-radius: 3px;
+    margin: auto;
+    font-size: 13pt;
+    background: linear-gradient(to right, rgb(36, 80, 224), rgb(22, 22, 235));
+    width: 40%;
+    display: none;
+}
+
+div#voltar > a {
+    margin-top: 400px;
+    text-decoration: none;
+    color: white;
+    font-size: 13pt;
+}
+
+div#voltar:hover{
+    background: linear-gradient(to right, rgb(29, 64, 180), rgb(15, 15, 156));
 }
