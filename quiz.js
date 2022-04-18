@@ -20,7 +20,7 @@ q[0] = {
     alternativa2: 'começar',
     alternativa3: 'começar',
     alternativa4: 'começar',
-    correta: 'começar',
+    correta: 'comear',
 }
 
 q[1] = {
@@ -75,6 +75,7 @@ q[6] = {
 
 // BOTÃO PARA INICICAR O QUIZ
 function iniciar() {
+    acertos = 0
     container.style.display = 'block'
     pergunta.textContent = q[cont].perguntaQuestao
     a1.textContent = q[cont].alternativa1
@@ -83,28 +84,43 @@ function iniciar() {
     a4.textContent = q[cont].alternativa4
     start.style.display = 'none'
 
-    cont = 0
 }
 
 // FUNÇÕES DAS ALTERNATIVAS
 function alternativa1() {
+    if(q[nQuestao].alternativa1 == q[nQuestao].correta){
+        acertos += 1
+    }
+    nQuestao += 1
     proximaQuestao()
-    questaoCorreta1()
+    
 }
 
 function alternativa2() {
+    if(q[nQuestao].alternativa2 == q[nQuestao].correta){
+        acertos += 1
+    }
+    nQuestao += 1
     proximaQuestao()
-    questaoCorreta2()
+    
 }
 
 function alternativa3() {
+    if(q[nQuestao].alternativa3 == q[nQuestao].correta){
+        acertos += 1
+    }
+    nQuestao += 1
     proximaQuestao()
-    questaoCorreta3() 
+    
 }
 
 function alternativa4() {
+    if(q[nQuestao].alternativa4 == q[nQuestao].correta){
+        acertos += 1
+    }
+    nQuestao += 1
     proximaQuestao()
-    questaoCorreta4()
+    
 }
 
 // FUNÇÃO PARA AVANÇAR PARA AS PRÓXIMAS QUESTÕES
@@ -116,47 +132,11 @@ function proximaQuestao(){
     a2.textContent = q[cont].alternativa2
     a3.textContent = q[cont].alternativa3
     a4.textContent = q[cont].alternativa4
-    contagemAcertos.textContent = 'Acertos: ' + acertos + '/5'
+    contagemAcertos.textContent = 'Acertos:' + acertos + '/5'
 
     return
 }
 
-//FUNÇÃO PARA VERFICAR A QUESTÃO CORRETA
-function questaoCorreta1(){
-    if(q[nQuestao].alternativa1 == q[nQuestao].correta){
-        acertos += 1
-    }
-
-    nQuestao += 1
-    return
-}
-
-function questaoCorreta2(){
-    if(q[nQuestao].alternativa2 == q[nQuestao].correta){
-        acertos += 1
-    }
-
-    nQuestao += 1
-    return
-}
-
-function questaoCorreta3(){
-    if(q[nQuestao].alternativa3 == q[nQuestao].correta){
-        acertos += 1
-    }
-
-    nQuestao += 1
-    return
-}
-
-function questaoCorreta4(){
-    if(q[nQuestao].alternativa4 == q[nQuestao].correta){
-        acertos += 1
-    }
-
-    nQuestao += 1
-    return
-}
 
 
 //FUNÇÃO PARA DESABILITAR OS BOTES APÓS O QUIZ
@@ -166,7 +146,6 @@ function disabled_btn(){
         a2.style.display = 'none'
         a3.style.display = 'none'
         a4.style.display = 'none'
-        voltar.style.display = 'block'
     }
     
     return
