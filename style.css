@@ -81,3 +81,18 @@ div#numeroQuestao {
     font-size: 15pt;
 }
 
+a#voltar {
+    color: white;
+    text-decoration: none;
+    display: none;
+}
+
+a#voltar > button {
+    width: 30%;
+    background: linear-gradient(to right, rgb(0, 71, 202), rgb(0, 89, 255));
+}
+
+a#voltar > button:hover {
+    width: 30%;
+    background: linear-gradient(to right, rgb(1, 57, 161), rgb(3, 81, 228));
+}

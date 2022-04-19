@@ -7,6 +7,7 @@ const numQuest = document.getElementById('numeroQuestao')
 const container = document.querySelector('.container')
 const start = document.getElementById('Start')
 const contagemAcertos = document.getElementById('pontosAcertos')
+const voltar = document.getElementById('voltar')
 var cont = 0
 var acertos = 0
 var nQuestao = 0
@@ -146,6 +147,7 @@ function disabled_btn(){
         a2.style.display = 'none'
         a3.style.display = 'none'
         a4.style.display = 'none'
+        voltar.style.display = 'block'
     }
     
     return
