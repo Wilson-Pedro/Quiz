@@ -15,16 +15,8 @@ const q = [5]
 
 
 // QUESTÕES
-q[0] = {
-    perguntaQuestao: 'Clique em umas das opções para começar',
-    alternativa1: 'começar',
-    alternativa2: 'começar',
-    alternativa3: 'começar',
-    alternativa4: 'começar',
-    correta: 'comear',
-}
 
-q[1] = {
+q[0] = {
     perguntaQuestao: 'Quanto é 3 x 3 ?',
     alternativa1: 1,
     alternativa2: 0,
@@ -33,7 +25,7 @@ q[1] = {
     correta: 9,
 }
 
-q[2] = {
+q[1] = {
     perguntaQuestao: 'Quanto é 64 / 4 ?',
     alternativa1: 4,
     alternativa2: 8,
@@ -42,7 +34,7 @@ q[2] = {
     correta: 8,
 }
 
-q[3] = {
+q[2] = {
     perguntaQuestao: 'Quanto é 15 + 13 ?',
     alternativa1: 8,
     alternativa2: 9,
@@ -51,7 +43,7 @@ q[3] = {
     correta: 28,
 }
 
-q[4] = {
+q[3] = {
     perguntaQuestao: 'Quanto é 4 x 4 ?',
     alternativa1: 16,
     alternativa2: 2,
@@ -60,7 +52,7 @@ q[4] = {
     correta: 16,
 }
 
-q[5] = {
+q[4] = {
     perguntaQuestao: 'Quanto é 5 x 4 ?',
     alternativa1: 16,
     alternativa2: 2,
@@ -69,7 +61,7 @@ q[5] = {
     correta: 20,
 }
 
-q[6] = {
+q[5] = {
     perguntaQuestao: 'Quiz Finalizado',
     
 }
@@ -142,7 +134,7 @@ function proximaQuestao(){
 
 //FUNÇÃO PARA DESABILITAR OS BOTES APÓS O QUIZ
 function disabled_btn(){
-    if (cont == 6){
+    if (cont == 5){
         a1.style.display = 'none'
         a2.style.display = 'none'
         a3.style.display = 'none'
